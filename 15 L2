@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+  float a, b, c, x, y, delta;
+   cout << "Calculadora de funcao de segundo grau";
+   cout << "\n-----------------------------------------";
+   
+   cout << "\nInsira o valor de a: ";
+   cin >> a;
+   cout << "\nInsira o valor de b: ";
+   cin >> b;
+   cout << "\nInsira o valor de c: ";
+   cin >> c;
+   if (a <= 0){
+     cout << "\nNão é função de segundo grau";
+   }else{
+     delta = (b*b) - (4*a*c);
+     if (delta < 0){
+       cout << "\nNão existe raiz real";
+     }else if(delta == 0){
+     x = -b/(2*a);
+     cout << "\nraiz unica: " << x;
+   }  else{
+     x = (-b + sqrt(delta))/(2*a);
+     y = (-b - sqrt(delta))/(2*a);
+     cout << "\n\traiz 1: " << x;
+     cout << "\n\traiz 2: " << y;
+   }
+}
+}
