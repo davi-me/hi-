@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  int codBeb, codSand, qtdBeb, qtdSand;
+  float preco = 0;
+
+  cout << "\n\tCARDAPIO ";
+  cout << "\n\n\tSanduiche ";	
+  cout << "\n\tCodigo\t\tDescricao\t\tPreço Unitario ";
+  cout << "\n\t100\t\tCachorro quente\t\t1,10 ";
+  cout << "\n\t101\t\tBauru simples\t\t1,30 ";
+  cout << "\n\t102\t\tBauru com ovo\t\t1,50 ";
+  cout << "\n\t10\t\tHamburger\t\t\t1,10 ";
+  cout << "\n\t104\t\tCheesburger\t\t\t1,30 ";
+  cout << "\n\n\tBebida ";
+  cout << "\n\tCodigo\t\tDescricao\t\tPreço Unitario ";
+  cout << "\n\t105\t\tRefrigerante\t\t1,00 ";
+  cout << "\n\t106\t\tSuco\t\t\t\t2,00 ";
+  cout << "\n\t107\t\tNescau\t\t\t\t1,50 ";
+  cout << "\n\n\tQual sanduiche deseja? ";
+  cin >> codSand;
+  cout << "\n\n\tQuantos? ";
+  cin >> qtdSand;
+  cout << "\n\n\tQual bebida deseja? ";
+  cin >> codBeb;
+  cout << "\n\n\tQuantas? ";
+  cin >> qtdBeb;
+
+  switch(codSand){
+    case 100:
+    case 103: preco = 1.10;
+      break;
+    case 101:
+    case 104: preco = 1.30;
+      break;
+    case 102: preco = 1.50;
+  }
+
+  preco = (preco * qtdSand);
+
+  switch(codBeb){
+    case 105: preco = preco + (1.00*qtdBeb);
+      break;
+    case 106: preco = preco + (2.00*qtdBeb);
+      break;
+    case 107: preco = preco + (1.50*qtdBeb);
+  }
+
+  cout << "\n\tPreco final = " << preco;
+}
